@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <P id="demo"></P>
+    <script>
+
+        let cars = ["BMW", "VOVLO", " RWW"];  //array operation
+        document.getElementById('demo').innerHTML = cars;
+        //console.log(cars.length);
+
+        let BMW = cars[0];
+        document.getElementById('demo').innerHTML = 'BMW'; //array item
+
+        let len = cars.length;      //array length
+        document.getElementById('demo').innerHTML = len;
+
+        let last = cars[cars.length - 1]    //-last value exquisite- last array item
+        document.getElementById('demo').innerHTML = last;
+
+        cars.forEach((item, index, array) => { console.log(item, index); });
+
+        // document.getElementById.('demo').innerHTML = (item, index);  test try format
+        document.getElementById('demo').innerHTML = cars.toString(); //--convert an array into string-
+        //--POP() -remove the last element
+        let sathish = cars.pop();
+        document.getElementById('demo').innerHTML = sathish;
+        let last1 = cars[cars.length - 1]
+        console.log(last1)
+        // PUSH() - new element add 
+        cars.push(" AUDI");
+        document.getElementById('demo').innerHTML = cars;
+
+        //SHIFT ()--remove the last element 
+        cars.shift();
+        document.getElementById('demo').innerHTML = cars;
+        //UNSHIFT()--add element at beggining first element
+
+        cars.unshift("MY NEW CAR");
+        document.getElementById('demo').innerHTML = cars;
+
+
+        //CONCAT()---- add the new array by merging existing array
+
+        let bike = ["yamaha", "hero", "honda", " vs"];
+        let vehiels = cars.concat(bike);
+        document.getElementById('demo').innerHTML = vehiels;
+
+        // SORT() --sort an array in ascending order
+
+
+        vehiels.sort();
+        document.getElementById('demo').innerHTML = vehiels;
+        //REVERSE (); reverse the element of an array
+        vehiels.reverse();
+        document.getElementById('demo').innerHTML = vehiels;
+
+        //ARRAY .MAP()---the map() create a new array and (function) on each array element ...
+
+        const num1 = [2, 3, 4, 5, 6, 7];
+        const num2 = num1.map(multiple);
+        function multiple(value) {
+            return value * 2;
+
+        }
+        //console.log(num2);
+        document.getElementById('demo').innerHTML = num2;
+
+        //ARRAY .FILTER ()
+        const num3 = num1.filter(comp);
+        function comp(value) {
+            return value < 5;
+        }
+        console.log(num3);
+        document.getElementById('demo').innerHTML = num3;
+
+
+        //ARRAY.REDUCE() ----the reduce method arrau an down to juct one value using function----
+
+        const num4 = num1.reduce(sum);
+        function sum(total, value) {
+            return total + value;
+        }
+
+        console.log(num4);
+        document.getElementById('demo').innerHTML = num4;
+
+    </script>
+</body>
+
+</html>
