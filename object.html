@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>The JavaScript <i>this</i> Keyword</h1>
+  <p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+  <p>Because <b>fullName</b> is a method of the person object.</p>
+
+  <p id="demo"></p>
+  <script>
+// Create an object:
+
+//const objname=new Object() Object constructor syntax 
+//const objname2={} Object literal syntax 
+
+
+//most of can user method " object literal" 
+/*const person = {
+  firstName: "John",   key: ""
+  lastName: "Doe",
+  id: 5566,
+  fullName : function() {   
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+console.log(person.fullName);
+
+
+*/ const person = {            //property 
+
+      firstName: "sathish",  //key : "value",
+      LastName: "kumar",
+      Age: 23,
+      isalive: true,
+      parent: {
+        father: "Appa",
+        Mother: "Amma"
+      },
+      //fullName: function () {
+      //return  this.firstName + " you are next " + this.LastName
+
+      //console.log(this.firstName);
+
+      fullName() {
+        return this.firstName + "  " + this.LastName
+
+      },
+
+    }
+    const personMethods = {
+      yearOfBirth() {
+        return new Date().getFullYear() - this.Age
+      },
+
+    }
+    //Object merging
+    Object.assign(person, personMethods)
+
+    //Object Cloning 
+    console.log(person.yearOfBirth());
+    //document.getElementById("demo").innerHTML = person.fullName();
+
+    //Spread Operator
+    const finaObj = { ...person, ...personMethods }
+
+
+  </script>
+
+</body>
+
+</html>

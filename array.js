@@ -15,3 +15,14 @@ document.getElementById('demo').innerHTML = 'BMW'; //array item
 
 let len = cars.length;      //array length
 document.getElementById('demo').innerHTML = len;  
+
+
+for (let i = 10; i <= 1; i--) {   //odd number 
+
+    if (i % 2 !== 0) {
+        console.log(" this is odd number" + i)
+
+
+    }
+
+}
