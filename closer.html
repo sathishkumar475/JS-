@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+
+<body>
+
+
+    <h2>Closures</h2>
+    <p id="demo">A function can access all variables defined inside the function, like this: But a function can also
+        access variables defined outside the function</p>
+    <button href={https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_scope4} variant="primary"
+        onClick={this.onClickDoSomething}>
+
+        click me </button>
+    <style>
+        body {
+            background-color: rgb(229, 244, 244);
+        }
+
+        h2 {
+            font-weight: 200;
+            align-items: center;
+            text-align: center;
+            color: rgb(12, 69, 69);
+            text-transform: uppercase;
+            font-style: oblique;
+        }
+
+        p {
+            font-weight: 100;
+        }
+
+        button {
+            background-color: cadetblue;
+            background-size: cover;
+
+        }
+    </style>
+    <script>
+
+        function sumprice(mobile) {
+            console.log('mobile price is :', mobile);
+            return function (laptop) {
+                console.log('laptpop price is :', laptop);
+            }
+        }
+
+        let reference = sumprice(15000);
+        reference(38000);
+
+    </script>
+</body>
+
+</html>
