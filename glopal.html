@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure </title>
+</head>
+
+<body>
+
+    <h3>Sathish at Closure</S></h3>
+    <h1>Glopal variable </h1>
+
+    <h4>All variables declared without "var" or "let" or anything else preceding it like "const" are global.So ....</br>
+        myVar is a global variable and can be used anywhere inside </h4>
+
+
+    <h1>Local variable </h1>
+    <h4>Local variables are those which are declared inside a JavaScript function. <br> local variables possess
+        function scope, which makes them only accessible within the function and not visible outside the function. </h4>
+
+    <h1>Closures</h1>
+    <h4>A function can access all variables defined inside the function, like this:<br> But a function can also
+        access variables defined outside the function</h4>
+
+    <form>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Find your!!!" name="uname" required>
+            <br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Strong Password" name="psw" required>
+
+            <button type="submit" onclick="myFunction()">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+
+    </form>
+
+    <button type="button" onclick="initaccount()">Click your balance </button>
+    <style>
+        body {
+
+
+            background-position: 0cm;
+            background-image: url(./lap@.png);
+
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+
+        }
+
+        h3 {
+            font-weight: 500%;
+            color: aliceblue;
+            text-align: center;
+
+            font-size: large;
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+        }
+
+        h1 {
+
+            font-style: oblique;
+            color: rgb(172, 172, 242);
+            text-align: left;
+        }
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+
+
+        h4 {
+            color: beige;
+        }
+    </style>
+    <script>
+
+        function myFunction() {
+            myVar = "value";               // myVar is a global variable and can be used anywhere inside
+        }
+        var yourvariablevalue = 'this is a sample value Glopal';
+
+        console.log(yourvariablevalue);
+
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function initaccount() {
+            var balance = 1000;
+
+            function currentbalance() {
+                balance = balance - 100;
+                alert(balance);
+            }
+            currentbalance();
+        }
+        function myFunction() {
+            location.replace("file:///C:/Users/Achusathish/Documents/HTML/responsive-1.html")
+        }
+    </script>
+</body>
+
+</html>
