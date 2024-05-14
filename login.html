@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Web tools Sathish</h1>
+        <form action="" id="form">
+            <h2>Sign-up </h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="username" id="username" name="username" placeholder="Enter your name">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="Email" name="Email" placeholder="Enter your email">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="cpassword" name="cpassword" placeholder="Enter your password">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="cpassword">Confirm password</label>
+                <input type="password" id="cpassword" name="cpassword" placeholder="Please again enter your password">
+                <div class="error"></div>
+            </div>
+            <button onclick="myFunction()">Register</button>
+        </form>
+    </div>
+
+    <style>
+        body {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgb(152, 190, 213) 0%, rgba(111, 76, 198, 0.734) 58%);
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'poppins ' sans-serif;
+
+        }
+
+        h1 {
+            text-align: left;
+            font-weight: 500px;
+            font-size: 40px;
+            color: rgb(123, 76, 174);
+            background-attachment: fixed;
+            background-color: rgb(137, 216, 216);
+            font-style: italic;
+
+        }
+
+        #form {
+            width: 400px;
+            margin: 20vh auto 0 auto;
+            background-color: whitesmoke;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(72, 109, 210);
+        }
+
+        #form button {
+
+            background-color: rgb(22, 165, 213);
+            color: white;
+            border: 2px solid;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20 px;
+            width: 100%;
+
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+
+        }
+
+        .input-group input {
+
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 15px;
+            margin-top: 5px;
+            border-color: aquamarine;
+
+
+        }
+
+        .input-group input:focus {
+            outline: 0;
+        }
+    </style>
+    <script>
+
+        function myFunction() {
+            location.replace("file:///C:/Users/Achusathish/Documents/HTML/responsive-1.html")
+        }
+    </script>
+</body>
+
+</html>
